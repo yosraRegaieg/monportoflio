@@ -1,0 +1,331 @@
+/* ====================================
+   FICHIER COMPLET : style.css
+   Mis à jour le 10 novembre 2025
+   ==================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1e3a5f;
+  --accent: #ffd369;
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --text: #263238;
+  --muted: #6b7280;
+  --radius: 12px;
+  --maxwidth: 1100px;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(180deg, rgba(30,58,95,0.95), rgba(30,58,95,0.95));
+  color: rgb(254, 249, 249);
+  padding: 35px 0;
+  box-shadow: 0 4px 18px rgba(16,24,40,0.08);
+  text-align: center;
+  top: 0;
+  z-index: 30;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+.nav a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.22s ease, transform 0.18s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* SECTION GÉNÉRALE */
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* PRÉSENTATION */
+.presentation-container {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  padding: 10px;
+}
+
+.presentation-container .texte {
+  flex: 1;
+  min-width: 260px;
+}
+
+.presentation-container .texte p {
+  margin: 12px 0 18px 0;
+  color: var(--text);
+  font-size: 16px;
+}
+
+/* INFOS PERSONNELLES */
+.infos-personnelles {
+  margin-top: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  border: 1px solid rgba(30,58,95,0.04);
+}
+
+.infos-personnelles p {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.infos-personnelles strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* PHOTO */
+.photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+  border: 6px solid rgba(255,255,255,0.6);
+  background: linear-gradient(135deg, #fff, #f3f6fb);
+}
+
+/* COMPÉTENCES */
+.competence-list {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  padding: 8px;
+}
+
+.card {
+  background: var(--card);
+  padding: 14px 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(15,23,42,0.06);
+  font-weight: 700;
+  color: var(--primary);
+  border: 1px solid rgba(30,58,95,0.04);
+}
+
+/* ====================================
+   PROJETS - NOUVEAUX BOUTONS (comme ton image)
+   ==================================== */
+.projets-list {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px'organisation;
+  flex-wrap: wrap;
+  padding: 20px 8px;
+}
+
+.projet-card {
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  width: auto;
+  min-width: 260px;
+}
+
+.projet-card button {
+  width: 100%;
+  padding: 18px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--card);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.projet-card button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  background-color: #f8f9ff;
+  border-color: #cbd5e1;
+}
+
+.projet-card button:active {
+  transform: translateY(0);
+}
+
+/* FORMULAIRE */
+.formulaire {
+  max-width: 680px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+  padding: 8px;
+}
+
+.formulaire label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.formulaire input,
+.formulaire textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: white;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  box-shadow: 0 6px 18px rgba(30,58,95,0.06);
+  border-color: var(--primary);
+}
+
+.formulaire textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.formulaire button {
+  align-self: start;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, var(--primary), #163253);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(30,58,95,0.12);
+  transition: transform 0.14s ease, opacity 0.14s ease;
+}
+
+.formulaire button:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 18px 0;
+  margin-top: 36px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+@media (max-width: 880px) {
+  .presentation-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 18px;
+  }
+  .presentation-container .photo img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  .header .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav a {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  .projet-card {
+    width: 90%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projets-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .projet-card button {
+    padding: 16px 28px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root { --radius: 10px; }
+  .header h1 { font-size: 18px; }
+  .section { padding: 40px 0; }
+  .presentation-container .texte p { font-size: 15px; }
+  .card { font-size: 14px; padding: 12px; }
+  .formulaire input, .formulaire textarea { font-size: 14px; }
+  .projet-card button {
+    padding: 15px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* UX */
+a { cursor: pointer; }
+img { display: block; max-width: 100%; }
+
